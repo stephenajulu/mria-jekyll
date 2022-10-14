@@ -1,0 +1,30 @@
+{% if site.data.settings.author__section.enable == true %}
+<!-- begin section-author -->
+<section class="section section-author animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="section-author__inner">
+
+          <div class="section-author__image{% if site.data.settings.author__section.author__section__big__image and site.data.settings.author__section.author__section__small__image %} two-author-images{% endif %}">
+            {% if site.data.settings.author__section.author__section__big__image %}
+              <img class="lazy author__big__image" data-src="{{ site.data.settings.author__section.author__section__big__image }}" alt="{{ site.data.settings.author.author__name }}">
+            {% endif %}
+            {% if site.data.settings.author__section.author__section__small__image %}
+              <img class="lazy author__small__image" data-src="{{ site.data.settings.author__section.author__section__small__image }}" alt="{{ site.data.settings.author.author__name }}">
+            {% endif %}
+          </div>
+
+          <div class="section-author__content">
+            <h2 class="section-author__title">{{ site.data.settings.author__section.author__section__title }}</h2>
+            <p class="section-author__description">{{ site.data.settings.author__section.author__section__description }}</p>
+            <a href="{{ site.data.settings.author__section.aurhor__section__button__link | relative_url }}" class="section-author__button button">{{ site.data.settings.author__section.aurhor__section__button__text }}</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section-author -->
+{% endif %}

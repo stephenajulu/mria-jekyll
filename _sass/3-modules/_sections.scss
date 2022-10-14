@@ -1,0 +1,349 @@
+/* Sections + Page */
+.section {
+  margin-bottom: 68px;
+
+  &.featured-post {
+    margin-bottom: 68px;
+  }
+}
+
+.section__info {
+  position: relative;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--background-alt-color);
+  }
+}
+
+.section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.section__title {
+  margin-bottom: 0;
+  font-size: 32px;
+  line-height: 1;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 24px;
+  }
+}
+
+.section__link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  color: var(--link-color);
+
+  &:hover {
+    i {
+      transform: rotate(-45deg) translateX(2px);
+    }
+  }
+  
+  i {
+    margin-left: 8px;
+    transform: rotate(-45deg);
+    transition: all .1s;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding-left: 0;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+.section__description {
+  max-width: 460px;
+  color: var(--text-alt-color);
+}
+
+/* Section Blog */
+.blog {
+  .article__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .article__head {
+    margin-right: 32px;
+  }
+
+  .article__image {
+    width: 270px;
+    margin-bottom: 0;
+    padding-bottom: 100%;
+  }
+
+  .article__title {
+    margin-bottom: 12px;
+    font-size: 21px;
+  }
+
+  .article__excerpt {
+    margin-bottom: 16px;
+  }
+
+  @media only screen and (max-width: $wide) {
+    .article__title {
+      font-size: 26px;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .article__inner {
+      display: block;
+    }
+
+    .article__image {
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 75%;
+    }
+
+    .article__head {
+      margin-right: 0;
+    }
+
+    .article__excerpt {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+/* Section Videos */
+.videos {
+  padding: 100px 0;
+  margin-bottom: 100px;
+  background: var(--dark);
+
+  .section__info::after {
+    opacity: 0.07;
+  }
+
+  .section__title,
+  .section__link {
+    color: var(--white);
+  }
+
+  .article__image,
+  .article__author__image {
+    background: #000;
+  }
+
+  .article__title a,
+  .article__author__name {
+    color: var(--white);
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+
+  .section__description,
+  .article__excerpt,
+  .article__date {
+    color: var(--gray);
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 80px 0;
+  }
+}
+
+.dark-mode {
+  .videos {
+    background: #0f151b;
+
+    .section__info::after {
+      opacity: 1;
+    }
+  }
+}
+
+// Videos Page
+.videos-page {
+  margin-bottom: 68px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 48px;
+  }
+}
+
+/* Section Tag */
+.section-tag {
+  .article__title {
+    font-size: 21px;
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 26px;
+    }
+  }
+}
+
+/* Section Author */
+.section-author {
+  margin-bottom: 170px;
+
+  @media only screen and (max-width: $desktop) {
+    margin-bottom: 100px;
+  }
+}
+
+.section-author__inner {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: $desktop) {
+    flex-direction: column;
+  }
+}
+
+.section-author__image {
+  position: relative;
+  height: 618px;
+  max-width: 618px;
+  width: 50%;
+  margin-right: 48px;
+  border-radius: 8px;
+  background: var(--background-alt-color);
+
+  &.two-author-images {
+    margin-right: 160px;
+  }
+
+  img {
+    position: absolute;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--background-alt-color);
+  }
+
+  .author__big__image {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .author__small__image {
+    right: -110px;
+    bottom: -70px;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  }
+
+  @media only screen and (max-width: $wide) {
+    &.two-author-images {
+      margin-right: 90px;
+    }
+
+    .author__small__image {
+      right: -40px;
+      bottom: -40px
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 75%;
+    margin-right: 0;
+    margin-bottom: 32px;
+
+    &.two-author-images {
+      margin-right: 0;
+      margin-bottom: 72px;
+
+      .author__big__image {
+        width: calc(100% - 40px);
+      }
+    }
+
+
+    .author__small__image {
+      right: 0;
+      width: 360px;
+      height: 260px;
+      box-shadow: none;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .author__small__image {
+      width: 320px;
+      height: 220px;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 24px;
+
+    &.two-author-images {
+      margin-bottom: 64px;
+    }
+
+    .author__small__image {
+      width: 280px;
+      height: 180px;
+    }
+  }
+}
+
+.section-author__content {
+  width: 50%;
+  max-width: 585px;
+
+  .section-author__title {
+    margin-bottom: 20px;
+    font-size: 52px;
+  }
+
+  .section-author__description {
+    margin-bottom: 32px;
+    max-width: 500px;
+    font-size: 16px;
+    color: var(--text-alt-color);
+  }
+
+  @media only screen and (max-width: $wide) {
+    .section-author__title {
+      font-size: 42px;
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+    width: 100%;
+    max-width: 100%;
+
+    .section-author__description {
+      max-width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .section-author__title {
+      font-size: 26px;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    .section-author__description {
+      margin-bottom: 24px;
+    }
+  }
+}
+

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+description: Laruso blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!
+---
+
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner">
+          <h1 class="hero__title">{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.blog__settings.blog__title }}{% endif %}</h1>
+          {% if page.description %}
+            <p class="hero__description">{{ page.description }}</p>
+          {% else site.data.settings.blog__settings.blog__description %}
+            <p class="hero__description">{{ site.data.settings.blog__settings.blog__description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
+
+<div class="container animate">
+  <div class="row">
+    {% if site.posts.size > 0 %}
+      {% for post in paginator.posts offset:0 %}
+        {% include article.html %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% include pagination.html %}

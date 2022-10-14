@@ -1,0 +1,142 @@
+#-------------------------------
+# Site Settings
+title: Mria
+logo: # You can add own logo. For example '/images/logo.png'.
+description: Mria is a multipurpose blog theme for Jekyll
+color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+
+
+#-------------------------------
+# Navigation Settings
+menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'Blog'
+      url: '/blog/'
+    - title: 'Authors'
+      url: '/authors/'
+    - title: 'Videos'
+      url: '/videos/'
+    - title: 'Pages'
+      submenu:
+      - url: '/about/'
+        title: 'About'
+      - url: '/contact/'
+        title: 'Contact'
+      - url: '/elements/'
+        title: 'Elements'
+
+
+#-------------------------------
+# Hero Settings
+hero:
+  enable: true
+  hero__title: Thoughts, stories and ideas.
+  hero__description: Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.
+  hero__image: # You can add hero image. For example '/images/06.jpg'
+
+
+#-------------------------------
+# Author Global Settings
+author:
+  author__name: Alena Curtis
+  author__bio: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
+  author__avatar: /images/01-1.jpg
+
+
+#-------------------------------
+# Blog Section Settings
+blog__settings:
+  enable: true
+  blog__title: Latest Posts
+  blog__description:
+
+
+#-------------------------------
+# Videos Section Settings
+videos__settings:
+  enable: true
+  videos__title: Latest Videos
+  videos__description:
+
+
+#-------------------------------
+# Tag Section Settings
+tag__settings:
+  enable: true
+  tag: travel # To display the tag section, specify your favorite tag.
+
+
+#-------------------------------
+# Author Section Settings
+author__section:
+  enable: true
+  author__section__title: Hello, my name is Alena. I’m reviewer and content creator.
+  author__section__description: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
+  aurhor__section__button__text: More About Me
+  aurhor__section__button__link: /about
+  author__section__big__image: /images/100.jpg
+  author__section__small__image: /images/101.jpg
+
+
+#-------------------------------
+# Newsletter Settings
+mailchimp__settings:
+  enable: true
+  mailchimp__title: Get interesting news
+  mailchimp__description: Subscribe to our newsletter and we’ll send you the emails of latest posts.
+  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+  mailchimp__input__text: Your email address
+  mailchimp__button__text: Subscribe
+  mailchimp__background__image: /images/subscribe-bg.jpg
+
+
+#-------------------------------
+# Footer Settings
+footer__description: Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.
+
+
+# Social Links
+social:
+- {icon: "twitter", link: "https://twitter.com"}
+- {icon: "facebook", link: "https://facebook.com"}
+- {icon: "codepen", link: "https://codepen.io"}
+- {icon: "pinterest", link: "https://pinterest.com"}
+- {icon: "vimeo", link: "https://vimeo.com"}
+
+# Example of adding a new link to the footer - {icon: "instagram", link: "https://instagram.com"}
+# Other icons can be found at https://ionicons.com/v4/
+
+
+# Footer Navigation
+footer__menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'About'
+      url: '/about/'
+    - title: 'Contact'
+      url: '/contact/'
+    - title: 'Elements'
+      url: '/elements/'
+
+
+#-------------------------------
+# Contact Settings
+contact:
+  email: your@email.com # Add your form_id
+  description: Mria comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want. # Add a description of your form
+
+# NOTE
+# Mria theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvodstudio-demo
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your GA Tracking Id
